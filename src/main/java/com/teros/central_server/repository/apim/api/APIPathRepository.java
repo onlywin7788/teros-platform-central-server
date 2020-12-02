@@ -7,9 +7,9 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.List;
 
 public interface APIPathRepository extends JpaRepository<APIPathEntity, Long> {
-    @Query(value = "SELECT * FROM APIM_API_PATH WHERE API_ID=?1", nativeQuery = true)
+    @Query(value = "SELECT * FROM RP_API_PATH WHERE API_ID=?1", nativeQuery = true)
     List<APIPathEntity> getAPIPathListByApiId(Long apiId);
 
-    @Query(value = "DELETE FROM APIM_API_PATH WHERE API_ID=?1", nativeQuery = true)
+    @Query(value = "DELETE FROM RP_API_PATH WHERE API_ID=?1", nativeQuery = true)
     void deleteAPIPathListByApiId(long apiId);
 }

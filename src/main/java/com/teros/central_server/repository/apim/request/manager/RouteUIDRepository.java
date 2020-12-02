@@ -11,7 +11,7 @@ public interface RouteUIDRepository extends JpaRepository<RouteUIDEntity, Long> 
 
     @Query(value =
             "SELECT CONCAT('API_ROUTE', '-', COUNT(*), '-', SUM(DATE_FORMAT(API_PATH.MODIFY_DTIME, '%Y%m%d%H%i%s'))) AS ROUTE_UID\n" +
-                    "FROM APIM_API_PATH API_PATH"
+                    "FROM RP_API_PATH API_PATH"
             ,nativeQuery = true)
     RouteUIDEntity getRouteUIDEntity();
 }

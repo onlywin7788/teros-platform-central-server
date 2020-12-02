@@ -15,9 +15,9 @@ public interface RouteRepository extends JpaRepository<RouteEntity, Long> {
                     ",CONCAT('/', API.API_NAME, '/', API.VERSION, API_PATH.SOURCE_URI) AS SOURCE_URI\n" +
                     ",TARGET_URI\n" +
                     ",API.TARGET_URL\n" +
-                    "FROM APIM_API API\n" +
-                    ",APIM_API_PATH API_PATH\n" +
-                    ",APIM_API_METHOD API_METHOD\n" +
+                    "FROM RP_API_DEF API\n" +
+                    ",APIM_RP_API_PATH API_PATH\n" +
+                    ",APIM_RP_API_METHOD API_METHOD\n" +
                     "WHERE API.API_ID=API_PATH.API_ID\n" +
                     "AND API_PATH.API_METHOD_ID=API_METHOD.API_METHOD_ID"
             ,nativeQuery = true)
@@ -25,7 +25,7 @@ public interface RouteRepository extends JpaRepository<RouteEntity, Long> {
 
     @Query(value =
             "SELECT CONCAT('API_ROUTE', '-', COUNT(*), '-', SUM(DATE_FORMAT(API_PATH.MODIFY_DTIME, '%Y%m%d%H%i%s'))) AS ROUTE_UID\n" +
-                    "FROM APIM_API_PATH API_PATH"
+                    "FROM RP_API_PATH API_PATH"
             ,nativeQuery = true)
     List<RouteUIDEntity> getRouteUIDEntity();
 }

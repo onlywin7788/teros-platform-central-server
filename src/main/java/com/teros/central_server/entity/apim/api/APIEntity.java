@@ -10,7 +10,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "apim_api")
+@Table(name = "rp_api_def")
 @Getter
 @Setter
 @NoArgsConstructor
