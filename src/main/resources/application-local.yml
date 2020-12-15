@@ -1,11 +1,8 @@
 # application-dev.yml
-logging:
-  level:
-    root: info
 spring:
   profiles: local
   datasource:
-    url: jdbc:mariadb://10.10.2.102:3306/TEROS_METADB?useSSL=false&useUnicode=true&characterEncoding=utf8
+    url: jdbc:mariadb://127.0.0.1:33306/TEROS_METADB?useSSL=false&useUnicode=true&characterEncoding=utf8
     driver-class-name: org.mariadb.jdbc.Driver
     username: root
     password: mocomsys1$
