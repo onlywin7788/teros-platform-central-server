@@ -12,7 +12,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-@Api(tags = {"PRODUCT"})
+@Api(tags = {"apim : product"})
 @RequiredArgsConstructor
 @RestController
 @RequestMapping(value = "/v1")

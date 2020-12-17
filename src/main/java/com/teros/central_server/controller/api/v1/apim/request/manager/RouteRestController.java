@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletResponse;
 
 @Slf4j
-@Api(tags = {"MANAGER-ROUTE-LIST"})
+@Api(tags = {"apim : manager-router-list"})
 @RestController
 @RequestMapping(value = "/v1")
 public class RouteRestController {

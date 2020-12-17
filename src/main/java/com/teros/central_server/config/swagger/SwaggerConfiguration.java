@@ -25,8 +25,8 @@ public class SwaggerConfiguration {
     }
 
     private ApiInfo swaggerInfo() {
-        return new ApiInfoBuilder().title("MI Manager API Documentation")
-                .description("MI Manager API Spec")
-                .license("Github Repository").licenseUrl("https://github.com/onlywin7788/mi-api-management").version("1").build();
+        return new ApiInfoBuilder().title("Teros Platform API Documentation")
+                .description("Teros Platform API Spec")
+                .license("Github Repository").licenseUrl("https://github.com/onlywin7788").version("1").build();
     }
 }

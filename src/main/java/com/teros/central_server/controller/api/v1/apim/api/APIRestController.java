@@ -10,7 +10,7 @@ import com.teros.central_server.service.apim.response.ResponseService;
 import io.swagger.annotations.Api;
 import org.springframework.web.bind.annotation.*;
 
-@Api(tags = {"API"})
+@Api(tags = {"apim : api"})
 @RestController
 @RequestMapping(value = "/v1")
 public class APIRestController {

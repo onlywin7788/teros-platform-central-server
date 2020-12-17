@@ -12,7 +12,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-@Api(tags = {"API-PATH"})
+@Api(tags = {"apim : api-path"})
 @RequiredArgsConstructor
 @RestController
 @RequestMapping(value = "/v1")

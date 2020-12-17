@@ -14,7 +14,7 @@ import com.teros.central_server.service.appm.app.AppService;
 import io.swagger.annotations.Api;
 import org.springframework.web.bind.annotation.*;
 
-@Api(tags = {"APP"})
+@Api(tags = {"appm : app"})
 @RestController
 @RequestMapping(value = "/v1")
 public class AppRestController {

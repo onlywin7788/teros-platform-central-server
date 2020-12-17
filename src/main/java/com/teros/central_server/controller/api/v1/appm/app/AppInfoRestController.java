@@ -28,7 +28,7 @@ class AppHealthInfo {
     String Status;
 }
 
-@Api(tags = {"APP_INFO"})
+@Api(tags = {"appm : app-info"})
 @Slf4j
 @RestController
 @RequestMapping(value = "/v1")
