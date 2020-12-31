@@ -8,20 +8,20 @@ import com.teros.central_server.model.response.SingleResult;
 import com.teros.central_server.service.apim.product.ProductService;
 import com.teros.central_server.service.apim.response.ResponseService;
 import io.swagger.annotations.Api;
-import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @Api(tags = {"apim : product"})
-@RequiredArgsConstructor
 @RestController
 @RequestMapping(value = "/v1")
 public class ProductRestController {
 
-    @Autowired
-    private ProductService productService;
-    @Autowired
-    private ResponseService responseService;
+    private final ProductService productService;
+    private final ResponseService responseService;
+
+    public ProductRestController(ProductService productService, ResponseService responseService) {
+        this.productService = productService;
+        this.responseService = responseService;
+    }
 
     @GetMapping(value = "/product/{id}")
     public SingleResult<ProductEntity> getProduct(@PathVariable long id) {

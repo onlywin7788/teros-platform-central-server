@@ -8,20 +8,20 @@ import com.teros.central_server.model.response.SingleResult;
 import com.teros.central_server.service.apim.plan.PlanService;
 import com.teros.central_server.service.apim.response.ResponseService;
 import io.swagger.annotations.Api;
-import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @Api(tags = {"apim : plan"})
-@RequiredArgsConstructor
 @RestController
 @RequestMapping(value = "/v1")
 public class PlanRestController {
 
-    @Autowired
-    private PlanService planService;
-    @Autowired
-    private ResponseService responseService;
+    private final PlanService planService;
+    private final ResponseService responseService;
+
+    public PlanRestController(PlanService planService, ResponseService responseService) {
+        this.planService = planService;
+        this.responseService = responseService;
+    }
 
     @GetMapping(value = "/plan/{id}")
     public SingleResult<PlanEntity> getPlan(@PathVariable long id) {

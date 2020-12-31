@@ -24,27 +24,27 @@ public class UserRestController {
     }
 
     @PostMapping(value = "/user")
-    public SingleResult<UserEntity> insertApp(@RequestBody ModelParamUser modelParam) throws Exception{
+    public SingleResult<UserEntity> insertData(@RequestBody ModelParamUser modelParam) throws Exception{
         return responseService.getSingleResult(userService.save(modelParam));
     }
 
     @GetMapping(value = "/user/{id}")
-    public SingleResult<UserEntity> selectUser(@PathVariable long id) {
+    public SingleResult<UserEntity> selectData(@PathVariable long id) {
         return responseService.getSingleResult(userService.select((id)));
     }
 
     @GetMapping(value = "/user")
-    public ListResult<UserEntity> selectUserAll() {
+    public ListResult<UserEntity> selectDataAll() {
         return responseService.getListResult(userService.selectAll());
     }
 
     @PutMapping(value = "/user/{id}")
-    public Long updateUser(@PathVariable long id, @RequestBody ModelParamUser modelParam) throws Exception{
+    public Long updateData(@PathVariable long id, @RequestBody ModelParamUser modelParam) throws Exception{
         return userService.update(id, modelParam);
     }
 
     @DeleteMapping(value = "/user/{id}")
-    public CommonResult deleteUser(@PathVariable long id) {
+    public CommonResult deleteData(@PathVariable long id) {
         boolean ret = userService.delete(id);
         return responseService.getResult(ret);
     }

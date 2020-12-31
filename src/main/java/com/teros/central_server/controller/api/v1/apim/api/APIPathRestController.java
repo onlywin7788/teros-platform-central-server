@@ -8,20 +8,20 @@ import com.teros.central_server.model.response.SingleResult;
 import com.teros.central_server.service.apim.api.APIPathService;
 import com.teros.central_server.service.apim.response.ResponseService;
 import io.swagger.annotations.Api;
-import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @Api(tags = {"apim : api-path"})
-@RequiredArgsConstructor
 @RestController
 @RequestMapping(value = "/v1")
 public class APIPathRestController {
 
-    @Autowired
-    private APIPathService apiPathService;
-    @Autowired
-    private ResponseService responseService;
+    private final APIPathService apiPathService;
+    private final ResponseService responseService;
+
+    public APIPathRestController(APIPathService apiPathService, ResponseService responseService) {
+        this.apiPathService = apiPathService;
+        this.responseService = responseService;
+    }
 
     @GetMapping(value = "/api-path/{id}")
     public SingleResult<APIPathEntity> getAPIPath(@PathVariable long id) {
