@@ -29,27 +29,27 @@ public class UserGroupRestController {
     }
 
     @PostMapping(value = "/user-group")
-    public SingleResult<UserGroupEntity> insertApp(@RequestBody ModelParamUserGroup modelParam) {
+    public SingleResult<UserGroupEntity> insertData(@RequestBody ModelParamUserGroup modelParam) {
         return responseService.getSingleResult(userGroupService.save(modelParam));
     }
 
     @GetMapping(value = "/user-group/{id}")
-    public SingleResult<UserGroupEntity> selectUserGroup(@PathVariable long id) {
+    public SingleResult<UserGroupEntity> selectData(@PathVariable long id) {
         return responseService.getSingleResult(userGroupService.select((id)));
     }
 
     @GetMapping(value = "/user-group")
-    public ListResult<UserGroupEntity> selectUserGroupAll() {
+    public ListResult<UserGroupEntity> selectDataAll() {
         return responseService.getListResult(userGroupService.selectAll());
     }
 
     @PutMapping(value = "/user-group/{id}")
-    public Long updateUserGroup(@PathVariable long id, @RequestBody ModelParamUserGroup modelParam) {
+    public Long updateData(@PathVariable long id, @RequestBody ModelParamUserGroup modelParam) {
         return userGroupService.update(id, modelParam);
     }
 
     @DeleteMapping(value = "/user-group/{id}")
-    public CommonResult deleteUserGroup(@PathVariable long id) {
+    public CommonResult deleteData(@PathVariable long id) {
         boolean ret = userGroupService.delete(id);
         return responseService.getResult(ret);
     }

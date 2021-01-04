@@ -8,20 +8,20 @@ import com.teros.central_server.model.response.SingleResult;
 import com.teros.central_server.service.apim.catalog.CatalogService;
 import com.teros.central_server.service.apim.response.ResponseService;
 import io.swagger.annotations.Api;
-import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @Api(tags = {"apim : catalog"})
-@RequiredArgsConstructor
 @RestController
 @RequestMapping(value = "/v1")
 public class CatalogRestController {
 
-    @Autowired
-    private CatalogService catalogService;
-    @Autowired
-    private ResponseService responseService;
+    private final CatalogService catalogService;
+    private final ResponseService responseService;
+
+    public CatalogRestController(CatalogService catalogService, ResponseService responseService) {
+        this.catalogService = catalogService;
+        this.responseService = responseService;
+    }
 
     @GetMapping(value = "/catalog/{id}")
     public SingleResult<CatalogEntity> getCatalog(@PathVariable long id) {
