@@ -32,6 +32,7 @@ public class FlowService {
     public FlowEntity save(ModelParamFlow modelParam) {
         FlowEntity entity = FlowEntity.builder()
                 .flowName(modelParam.getFlowName())
+                .layout(modelParam.getLayout())
                 .description(modelParam.getDescription())
                 .build();
 
