@@ -29,6 +29,9 @@ public class FlowEntity extends CommonDateEntity implements Serializable {
     private String layout;
 
     @Column(length = 1048576)
+    private String configContents;
+
+    @Column(length = 1048576)
     private String description;
 
     @Builder
@@ -42,5 +45,9 @@ public class FlowEntity extends CommonDateEntity implements Serializable {
         this.flowName = flowName;
         this.layout = layout;
         this.description = description;
+    }
+
+    public void updateConfigContents(String configContents) {
+        this.configContents = configContents;
     }
 }

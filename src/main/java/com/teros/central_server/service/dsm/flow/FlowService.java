@@ -3,6 +3,7 @@ package com.teros.central_server.service.dsm.flow;
 import com.teros.central_server.controller.advice.exception.CommonException;
 import com.teros.central_server.entity.dsm.flow.FlowEntity;
 import com.teros.central_server.model.dsm.flow.ModelParamFlow;
+import com.teros.central_server.model.dsm.flow.update.ModelParamFlowConfig;
 import com.teros.central_server.repository.dsm.flow.FlowRepository;
 import org.springframework.stereotype.Service;
 
@@ -45,6 +46,14 @@ public class FlowService {
 
         FlowEntity entity = select(id);
         entity.update(modelParam.getFlowName(), modelParam.getLayout(), modelParam.getDescription());
+        return id;
+    }
+
+    @Transactional
+    public Long updateConfigContents(long id, ModelParamFlowConfig modelParam) {
+
+        FlowEntity entity = select(id);
+        entity.updateConfigContents(modelParam.getConfigContents());
         return id;
     }
 

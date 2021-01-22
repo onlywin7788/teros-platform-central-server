@@ -8,17 +8,13 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class ModelParamFlow {
+public class ModelParamFlowClassProp {
 
-    @ApiModelProperty(value = "flowName", required = true)
+    @ApiModelProperty(value = "propName", required = false)
     private String flowName;
 
-    @ApiModelProperty(value = "layout", required = true)
+    @ApiModelProperty(value = "displayName", required = false)
     private String layout;
-
-    @ApiModelProperty(value = "configContents", required = false)
-    private String configContents;
-
 
     @ApiModelProperty(value = "description", required = false)
     private String description;
