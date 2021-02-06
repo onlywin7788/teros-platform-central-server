@@ -10,9 +10,6 @@ import lombok.Setter;
 @NoArgsConstructor
 public class ModelParamAppType {
 
-    @ApiModelProperty(value = "typeName", required = true)
-    private String typeName;
-
     @ApiModelProperty(value = "description", required = false)
     private String description;
 }

@@ -34,6 +34,11 @@ public class ExecutionGroupRestController {
         return responseService.getSingleResult(executionGroupService.select((id)));
     }
 
+    @GetMapping(value = "/exec-group/group-flow-id/{id}")
+    public SingleResult<ExecutionGroupEntity> selectDataByGroupFlowId(@PathVariable long id) {
+        return responseService.getSingleResult(executionGroupService.findGroupByGroupFlowId((id)));
+    }
+
     @GetMapping(value = "/exec-group")
     public ListResult<ExecutionGroupEntity> selectDataAll() {
         return responseService.getListResult(executionGroupService.selectAll());

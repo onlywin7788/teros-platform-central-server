@@ -18,22 +18,18 @@ public class AppTypeEntity implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long appTypeId;
+    private String typeCode;
 
-    @Column(name ="app_group_id")
-    private Long appGroupId;
-
-    @Column(length = 2048)
-    private String typeName;
-
-    @Column(length = 2048)
+    @Column
     private String description;
 
+
     @Builder
-    public AppTypeEntity(long appGroupId, String typeName, String description) {
-        this.appGroupId = appGroupId;
-        this.typeName = typeName;
+    public AppTypeEntity(String typeName, String description, Long groupId) {
+        this.description = description;
+    }
+
+    public void update(String typeName, String description, Long groupId) {
         this.description = description;
     }
 }

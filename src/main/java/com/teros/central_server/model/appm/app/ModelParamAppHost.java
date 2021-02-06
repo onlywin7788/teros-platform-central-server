@@ -8,17 +8,14 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class ModelParamApp {
+public class ModelParamAppHost {
 
-    @ApiModelProperty(value = "appName", required = true)
-    private String appName;
-
-    @ApiModelProperty(value = "appTypeId", required = true)
-    private long appTypeId;
-    
-    @ApiModelProperty(value = "hostInfo", required = true)
-    private String hostInfo;
+    @ApiModelProperty(value = "hostName", required = true)
+    private String hostName;
 
     @ApiModelProperty(value = "description", required = false)
     private String description;
+
+    @ApiModelProperty(value = "typeCode", required = true)
+    private String typeCode;
 }

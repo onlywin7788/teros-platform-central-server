@@ -28,6 +28,10 @@ public class ExecutionGroupService {
         return executionGroupRepository.findAll();
     }
 
+    public ExecutionGroupEntity findGroupByGroupFlowId(Long flowId){
+        return executionGroupRepository.findGroupByGroupFlowId(flowId);
+    }
+
     @Transactional
     public ExecutionGroupEntity save(ModelParamExecutionGroup modelParam) {
         ExecutionGroupEntity entity = ExecutionGroupEntity.builder()

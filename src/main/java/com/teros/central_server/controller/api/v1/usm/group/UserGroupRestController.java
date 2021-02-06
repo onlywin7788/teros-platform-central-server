@@ -1,15 +1,10 @@
 package com.teros.central_server.controller.api.v1.usm.group;
 
-import com.teros.central_server.entity.appm.app.AppEntity;
-import com.teros.central_server.entity.appm.app.AppGroupEntity;
-import com.teros.central_server.entity.appm.app.AppTypeEntity;
 import com.teros.central_server.entity.usm.group.UserGroupEntity;
-import com.teros.central_server.model.appm.app.ModelParamApp;
 import com.teros.central_server.model.response.CommonResult;
 import com.teros.central_server.model.response.ListResult;
 import com.teros.central_server.model.response.SingleResult;
 import com.teros.central_server.model.usm.group.ModelParamUserGroup;
-import com.teros.central_server.model.usm.user.ModelParamUser;
 import com.teros.central_server.service.apim.response.ResponseService;
 import com.teros.central_server.service.usm.group.UserGroupService;
 import io.swagger.annotations.Api;
