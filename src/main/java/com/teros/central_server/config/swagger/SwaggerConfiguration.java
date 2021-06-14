@@ -10,7 +10,7 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-// connect => http://ip:port/swagger-ui.html
+// connect => http://ip:port/central-server/swagger-ui.html
 
 @Configuration
 @EnableSwagger2
