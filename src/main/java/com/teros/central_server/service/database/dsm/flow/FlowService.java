@@ -1,8 +1,8 @@
 package com.teros.central_server.service.database.dsm.flow;
 
 import com.teros.central_server.controller.advice.exception.CommonException;
-import com.teros.central_server.entity.dsm.flow.FlowEntity;
-import com.teros.central_server.entity.dsm.group.ExecutionGroupFlowEntity;
+import com.teros.central_server.entity.dataservice.flow.FlowEntity;
+import com.teros.central_server.entity.dataservice.group.ExecutionGroupFlowEntity;
 import com.teros.central_server.model.dsm.flow.ModelParamFlow;
 import com.teros.central_server.model.dsm.flow.update.ModelParamFlowConfig;
 import com.teros.central_server.repository.dsm.flow.FlowRepository;

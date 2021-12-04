@@ -1,7 +1,6 @@
 package com.teros.central_server.repository.dsm.group;
 
-import com.teros.central_server.entity.dsm.flow.FlowClassEntry;
-import com.teros.central_server.entity.dsm.group.ExecutionGroupEntity;
+import com.teros.central_server.entity.dataservice.group.ExecutionGroupEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

@@ -1,7 +1,7 @@
 package com.teros.central_server.service.database.dsm.group;
 
 import com.teros.central_server.controller.advice.exception.CommonException;
-import com.teros.central_server.entity.dsm.group.ExecutionGroupFlowEntity;
+import com.teros.central_server.entity.dataservice.group.ExecutionGroupFlowEntity;
 import com.teros.central_server.model.dsm.group.ModelParamExecutionGroupFlow;
 import com.teros.central_server.repository.dsm.group.ExecutionGroupFlowRepository;
 import org.springframework.stereotype.Service;

@@ -1,6 +1,6 @@
 package com.teros.central_server.internal.appm.app;
 
-import com.teros.central_server.service.internal.appm.app.AppInternalService;
+import com.teros.central_server.service.internal.apiservice.app.AppInternalService;
 import org.junit.jupiter.api.Test;
 
 public class AppInternalServiceTest {

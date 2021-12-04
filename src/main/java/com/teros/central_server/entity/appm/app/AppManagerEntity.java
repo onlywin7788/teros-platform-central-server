@@ -1,6 +1,6 @@
 package com.teros.central_server.entity.appm.app;
 
-import com.teros.central_server.entity.apim.common.CommonDateEntity;
+import com.teros.central_server.entity.apiservice.common.CommonDateEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

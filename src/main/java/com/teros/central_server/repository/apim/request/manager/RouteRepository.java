@@ -1,7 +1,7 @@
 package com.teros.central_server.repository.apim.request.manager;
 
-import com.teros.central_server.entity.apim.request.manager.RouteEntity;
-import com.teros.central_server.entity.apim.request.manager.RouteUIDEntity;
+import com.teros.central_server.entity.apiservice.request.manager.RouteEntity;
+import com.teros.central_server.entity.apiservice.request.manager.RouteUIDEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

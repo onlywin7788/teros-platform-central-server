@@ -1,6 +1,5 @@
 package com.teros.central_server.repository.appm.appm.app;
 
-import com.teros.central_server.entity.apim.api.APIPathEntity;
 import com.teros.central_server.entity.appm.app.AppHostEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

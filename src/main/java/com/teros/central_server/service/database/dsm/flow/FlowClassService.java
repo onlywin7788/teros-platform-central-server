@@ -1,7 +1,7 @@
 package com.teros.central_server.service.database.dsm.flow;
 
 import com.teros.central_server.controller.advice.exception.CommonException;
-import com.teros.central_server.entity.dsm.flow.FlowClassEntry;
+import com.teros.central_server.entity.dataservice.flow.FlowClassEntry;
 import com.teros.central_server.repository.dsm.flow.FlowClassRepository;
 import org.springframework.stereotype.Service;
 

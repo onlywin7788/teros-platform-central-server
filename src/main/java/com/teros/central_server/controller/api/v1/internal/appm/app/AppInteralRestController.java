@@ -1,11 +1,8 @@
 package com.teros.central_server.controller.api.v1.internal.appm.app;
 
-import com.teros.central_server.entity.appm.app.AppHostEntity;
-import com.teros.central_server.model.appm.app.ModelParamAppHost;
 import com.teros.central_server.model.response.CommonResult;
-import com.teros.central_server.model.response.SingleResult;
-import com.teros.central_server.service.database.apim.response.ResponseService;
-import com.teros.central_server.service.internal.appm.app.AppInternalService;
+import com.teros.central_server.service.database.apiservice.response.ResponseService;
+import com.teros.central_server.service.internal.apiservice.app.AppInternalService;
 import io.swagger.annotations.Api;
 import org.springframework.web.bind.annotation.*;
 

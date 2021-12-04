@@ -5,7 +5,7 @@ import com.teros.central_server.model.response.CommonResult;
 import com.teros.central_server.model.response.ListResult;
 import com.teros.central_server.model.response.SingleResult;
 import com.teros.central_server.model.usm.user.ModelParamUser;
-import com.teros.central_server.service.database.apim.response.ResponseService;
+import com.teros.central_server.service.database.apiservice.response.ResponseService;
 import com.teros.central_server.service.database.usm.user.UserService;
 import io.swagger.annotations.Api;
 import org.springframework.web.bind.annotation.*;
