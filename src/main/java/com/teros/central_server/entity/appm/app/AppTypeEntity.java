@@ -18,7 +18,7 @@ public class AppTypeEntity implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
-    private String typeCode;
+    private String appTypeId;
 
     @Column
     private String description;

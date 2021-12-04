@@ -29,18 +29,18 @@ public class AppHostEntity extends CommonDateEntity implements Serializable {
     private String description;
 
     @Column
-    private String typeCode;
+    private Long appTypeId;
 
     @Builder
-    public AppHostEntity(String hostName, String description, String typeCode) {
+    public AppHostEntity(String hostName, String description, Long appTypeId) {
         this.hostName = hostName;
         this.description = description;
-        this.typeCode = typeCode;
+        this.appTypeId = appTypeId;
     }
 
-    public void update(String hostName, String description, String typeCode) {
+    public void update(String hostName, String description, Long appTypeId) {
         this.hostName = hostName;
         this.description = description;
-        this.typeCode = typeCode;
+        this.appTypeId = appTypeId;
     }
 }

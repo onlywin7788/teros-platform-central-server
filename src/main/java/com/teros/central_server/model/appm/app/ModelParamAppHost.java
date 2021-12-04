@@ -16,6 +16,6 @@ public class ModelParamAppHost {
     @ApiModelProperty(value = "description", required = false)
     private String description;
 
-    @ApiModelProperty(value = "typeCode", required = true)
-    private String typeCode;
+    @ApiModelProperty(value = "appTypeId", required = true)
+    private Long appTypeId;
 }
