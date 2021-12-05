@@ -1,7 +1,7 @@
 package com.teros.central_server.controller.api.v1.database.apiservice.project;
 
 import com.teros.central_server.entity.apiservice.project.APIProjectEntity;
-import com.teros.central_server.model.apim.project.ModelParamAPIProject;
+import com.teros.central_server.model.apiservice.project.ModelParamAPIProject;
 import com.teros.central_server.model.response.CommonResult;
 import com.teros.central_server.model.response.ListResult;
 import com.teros.central_server.model.response.SingleResult;
@@ -10,7 +10,7 @@ import com.teros.central_server.service.database.apiservice.response.ResponseSer
 import io.swagger.annotations.Api;
 import org.springframework.web.bind.annotation.*;
 
-@Api(tags = {"api-service : project"})
+@Api(tags = {"1-1. api-service : project"})
 @RestController
 @RequestMapping(value = "/v1/api-service/project")
 public class APIProjectRestController {

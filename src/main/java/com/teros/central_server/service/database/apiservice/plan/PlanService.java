@@ -2,8 +2,8 @@ package com.teros.central_server.service.database.apiservice.plan;
 
 import com.teros.central_server.controller.advice.exception.CommonException;
 import com.teros.central_server.entity.apiservice.plan.PlanEntity;
-import com.teros.central_server.model.apim.plan.ModelParamPlan;
-import com.teros.central_server.repository.apim.plan.PlanRepository;
+import com.teros.central_server.model.apiservice.plan.ModelParamPlan;
+import com.teros.central_server.repository.apiservice.plan.PlanRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

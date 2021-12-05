@@ -1,12 +1,12 @@
 package com.teros.central_server.controller.api.v1.database.dataservice.group;
 
 import com.teros.central_server.entity.dataservice.group.ExecutionGroupFlowEntity;
-import com.teros.central_server.model.dsm.group.ModelParamExecutionGroupFlow;
+import com.teros.central_server.model.dataservice.group.ModelParamExecutionGroupFlow;
 import com.teros.central_server.model.response.CommonResult;
 import com.teros.central_server.model.response.ListResult;
 import com.teros.central_server.model.response.SingleResult;
 import com.teros.central_server.service.database.apiservice.response.ResponseService;
-import com.teros.central_server.service.database.dsm.group.ExecutionGroupFlowService;
+import com.teros.central_server.service.database.dataservice.group.ExecutionGroupFlowService;
 import io.swagger.annotations.Api;
 import org.springframework.web.bind.annotation.*;
 

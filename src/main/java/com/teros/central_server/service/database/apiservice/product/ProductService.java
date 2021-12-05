@@ -2,8 +2,8 @@ package com.teros.central_server.service.database.apiservice.product;
 
 import com.teros.central_server.controller.advice.exception.CommonException;
 import com.teros.central_server.entity.apiservice.product.ProductEntity;
-import com.teros.central_server.model.apim.product.ModelParamProduct;
-import com.teros.central_server.repository.apim.product.ProductRepository;
+import com.teros.central_server.model.apiservice.product.ModelParamProduct;
+import com.teros.central_server.repository.apiservice.product.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

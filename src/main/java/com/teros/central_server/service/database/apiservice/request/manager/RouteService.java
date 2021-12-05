@@ -2,8 +2,8 @@ package com.teros.central_server.service.database.apiservice.request.manager;
 
 import com.teros.central_server.entity.apiservice.request.manager.RouteEntity;
 import com.teros.central_server.entity.apiservice.request.manager.RouteUIDEntity;
-import com.teros.central_server.repository.apim.request.manager.RouteRepository;
-import com.teros.central_server.repository.apim.request.manager.RouteUIDRepository;
+import com.teros.central_server.repository.apiservice.request.manager.RouteRepository;
+import com.teros.central_server.repository.apiservice.request.manager.RouteUIDRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

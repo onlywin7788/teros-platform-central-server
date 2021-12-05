@@ -2,8 +2,8 @@ package com.teros.central_server.service.database.apiservice.api;
 
 import com.teros.central_server.controller.advice.exception.CommonException;
 import com.teros.central_server.entity.apiservice.api.APIPathEntity;
-import com.teros.central_server.model.apim.api.ModelParamAPIPath;
-import com.teros.central_server.repository.apim.api.APIPathRepository;
+import com.teros.central_server.model.apiservice.api.ModelParamAPIPath;
+import com.teros.central_server.repository.apiservice.api.APIPathRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,7 +1,7 @@
 package com.teros.central_server.controller.api.v1.database.apiservice.product;
 
 import com.teros.central_server.entity.apiservice.product.ProductEntity;
-import com.teros.central_server.model.apim.product.ModelParamProduct;
+import com.teros.central_server.model.apiservice.product.ModelParamProduct;
 import com.teros.central_server.model.response.CommonResult;
 import com.teros.central_server.model.response.ListResult;
 import com.teros.central_server.model.response.SingleResult;

@@ -1,7 +1,7 @@
 package com.teros.central_server.controller.api.v1.database.apiservice.api;
 
 import com.teros.central_server.entity.apiservice.api.APIPathEntity;
-import com.teros.central_server.model.apim.api.ModelParamAPIPath;
+import com.teros.central_server.model.apiservice.api.ModelParamAPIPath;
 import com.teros.central_server.model.response.CommonResult;
 import com.teros.central_server.model.response.ListResult;
 import com.teros.central_server.model.response.SingleResult;
@@ -10,7 +10,7 @@ import com.teros.central_server.service.database.apiservice.response.ResponseSer
 import io.swagger.annotations.Api;
 import org.springframework.web.bind.annotation.*;
 
-@Api(tags = {"api-service : api-path"})
+@Api(tags = {"1-3. api-service : api-path"})
 @RestController
 @RequestMapping(value = "/v1")
 public class APIPathRestController {
