@@ -27,8 +27,8 @@ public class InterfaceComponentRestController {
         return responseService.getSingleResult(flowClassService.select((id)));
     }
 
-    @GetMapping(value = "/find-by-name/{id}")
-    public SingleResult<InterfaceComponentEntity> selectDataByClassName(@PathVariable String name) {
+    @GetMapping(value = "/find-by-name")
+    public SingleResult<InterfaceComponentEntity> selectDataByClassName(@RequestParam(value = "name")String name) {
         return responseService.getSingleResult(flowClassService.selectByClassName(name));
     }
 

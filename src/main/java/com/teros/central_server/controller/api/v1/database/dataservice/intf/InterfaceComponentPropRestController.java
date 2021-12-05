@@ -26,8 +26,8 @@ public class InterfaceComponentPropRestController {
         return responseService.getSingleResult(service.select(id));
     }
 
-    @GetMapping(value = "/find-by-component-id/{id}")
-    public ListResult<InterfaceComponentPropEntity> selectByComponentId(@PathVariable long id) {
+    @GetMapping(value = "/find-by-component-id")
+    public ListResult<InterfaceComponentPropEntity> selectByComponentId(@RequestParam(value = "id")Long id) {
         return responseService.getListResult(service.selectBycomponentId(id));
     }
 
