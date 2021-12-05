@@ -10,7 +10,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "rp_ds_intf")
+@Table(name = "rep_dsm_intf")
 @Getter
 @Setter
 @NoArgsConstructor
