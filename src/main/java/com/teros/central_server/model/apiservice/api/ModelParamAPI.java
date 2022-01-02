@@ -19,6 +19,9 @@ public class ModelParamAPI {
     @ApiModelProperty(value = "targetUrl", required = true)
     private String targetUrl;
 
+    @ApiModelProperty(value = "configContents", required = true)
+    private String configContents;
+
     @ApiModelProperty(value = "description", required = false)
     private String description;
 }

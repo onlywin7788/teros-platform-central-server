@@ -28,26 +28,31 @@ public class APIEntity extends CommonDateEntity implements Serializable {
     @Column(length = 32)
     private String version;
 
-    @Column(length = 2048)
+    @Column
     private String targetUrl;
+
+    @Column
+    private String configContents;
 
     @Column(length = 1048576)
     private String description;
 
     @Builder
-    public APIEntity(String apiName, String version, String targetUrl, String description) {
+    public APIEntity(String apiName, String version, String targetUrl, String configContents, String description) {
 
         this.apiName = apiName;
         this.version = version;
         this.targetUrl = targetUrl;
+        this.configContents = configContents;
         this.description = description;
     }
 
-    public void update(String apiName, String version, String targetUrl, String description) {
+    public void update(String apiName, String version, String targetUrl, String configContents, String description) {
 
         this.apiName = apiName;
         this.version = version;
         this.targetUrl = targetUrl;
+        this.configContents = configContents;
         this.description = description;
     }
 

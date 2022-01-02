@@ -20,9 +20,16 @@ public class AppInteralRestController {
     }
 
     @GetMapping(value = "/internal/appm/app/host")
-    public CommonResult insertData(@RequestParam String host, @RequestParam long port) throws Exception{
+    public CommonResult isHostAlive(@RequestParam String host, @RequestParam long port) throws Exception{
 
         boolean ret =  appInternalService.isHostAlive(host, port);
+        return responseService.getResult(ret);
+    }
+
+    @PostMapping(value = "/internal/appm/app/deploy")
+    public CommonResult deployConfig(@RequestParam String host, @RequestParam long port) throws Exception{
+
+        boolean ret =  appInternalService.deployConfig(host, port);
         return responseService.getResult(ret);
     }
 }

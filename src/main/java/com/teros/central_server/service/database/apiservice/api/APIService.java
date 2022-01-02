@@ -4,7 +4,6 @@ import com.teros.central_server.controller.advice.exception.CommonException;
 import com.teros.central_server.entity.apiservice.api.APIEntity;
 import com.teros.central_server.model.apiservice.api.ModelParamAPI;
 import com.teros.central_server.repository.apiservice.api.APIRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -14,8 +13,11 @@ import java.util.List;
 @Service
 public class APIService {
 
-    @Autowired
-    private APIRepository apiRepository;
+    private final APIRepository apiRepository;
+
+    public APIService(APIRepository apiRepository) {
+        this.apiRepository = apiRepository;
+    }
 
     public APIEntity getAPI(Long apiId) {
         return apiRepository.findById(apiId).orElseThrow(() ->
@@ -26,12 +28,18 @@ public class APIService {
         return apiRepository.findAll();
     }
 
+    public void updateAPIConfigContents(String contents, Long id)
+    {
+        this.apiRepository.updateAPIContensConfigById(contents, id);
+    }
+
     @Transactional
     public APIEntity saveAPI(ModelParamAPI modelParamAPI) {
         APIEntity api = APIEntity.builder()
                 .apiName(modelParamAPI.getApiName())
                 .version(modelParamAPI.getVersion())
                 .targetUrl(modelParamAPI.getTargetUrl())
+                .configContents("")
                 .description(modelParamAPI.getDescription())
                 .build();
 
@@ -43,8 +51,8 @@ public class APIService {
     public Long updateAPI(long apiId, ModelParamAPI modelParamAPI) {
 
         APIEntity api = getAPI(apiId);
-        api.update(modelParamAPI.getApiName(), modelParamAPI.getVersion()
-                , modelParamAPI.getTargetUrl(), modelParamAPI.getDescription());
+        api.update(modelParamAPI.getApiName(), modelParamAPI.getVersion(), modelParamAPI.getTargetUrl()
+                ,"", modelParamAPI.getDescription());
         return apiId;
     }
 
