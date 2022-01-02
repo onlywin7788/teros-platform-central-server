@@ -27,9 +27,9 @@ public class AppInteralRestController {
     }
 
     @PostMapping(value = "/internal/appm/app/deploy")
-    public CommonResult deployConfig(@RequestParam String host, @RequestParam long port) throws Exception{
+    public CommonResult deployConfig(@RequestParam String host, @RequestParam long port, @RequestParam long apiId) throws Exception{
 
-        boolean ret =  appInternalService.deployConfig(host, port);
+        boolean ret =  appInternalService.deployConfig(host, port, apiId);
         return responseService.getResult(ret);
     }
 }

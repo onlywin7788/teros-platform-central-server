@@ -1,6 +1,7 @@
 package com.teros.central_server.service.database.apiservice.api.config;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -11,7 +12,7 @@ public class APIConfigRouteMaker {
     public String createRouteList(String name, String version, String sourcePath, String targetPath, String method, String uri) {
 
         APIConfigRoute apiConfigRoute = new APIConfigRoute();
-        Gson gson = new Gson();
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
         String baseURI = String.format("/%s/%s", name, version);
 
