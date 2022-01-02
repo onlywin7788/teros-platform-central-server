@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-@Api(tags = {"appm : api-internal-service"})
+@Api(tags = {"appm : data-internal-service"})
 @RestController
 @RequestMapping(value = "/v1")
 public class AppDataInteralRestController {
