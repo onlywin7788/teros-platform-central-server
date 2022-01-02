@@ -24,8 +24,8 @@ public class ExecutionGroupFlowService {
                 new CommonException("EX"));
     }
 
-    public ExecutionGroupFlowEntity selectByFlowId(Long flowId) {
-        return executionGroupFlowRepository.findByFlowId(flowId);
+    public ExecutionGroupFlowEntity selectByIntfId(Long intfId) {
+        return executionGroupFlowRepository.findByIntfId(intfId);
     }
 
 
@@ -37,7 +37,7 @@ public class ExecutionGroupFlowService {
     public ExecutionGroupFlowEntity save(ModelParamExecutionGroupFlow modelParam) {
         ExecutionGroupFlowEntity entity = ExecutionGroupFlowEntity.builder()
                 .execGroupId(modelParam.getExecGroupId())
-                .flowId(modelParam.getFlowId())
+                .intfId(modelParam.getIntfId())
                 .build();
 
         Long lastID = executionGroupFlowRepository.save(entity).getExecGroupId();
@@ -48,7 +48,7 @@ public class ExecutionGroupFlowService {
     public Long update(long id, ModelParamExecutionGroupFlow modelParam) {
 
         ExecutionGroupFlowEntity entity = select(id);
-        entity.update(modelParam.getExecGroupId(), modelParam.getFlowId());
+        entity.update(modelParam.getExecGroupId(), modelParam.getIntfId());
         return id;
     }
 

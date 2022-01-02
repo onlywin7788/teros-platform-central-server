@@ -4,5 +4,5 @@ import com.teros.central_server.entity.dataservice.group.ExecutionGroupFlowEntit
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ExecutionGroupFlowRepository extends JpaRepository<ExecutionGroupFlowEntity, Long> {
-    ExecutionGroupFlowEntity findByFlowId(Long flowId);
+    ExecutionGroupFlowEntity findByIntfId(Long intfId);
 }

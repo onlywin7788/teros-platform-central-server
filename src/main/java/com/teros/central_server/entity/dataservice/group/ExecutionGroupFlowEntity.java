@@ -26,16 +26,16 @@ public class ExecutionGroupFlowEntity extends CommonDateEntity implements Serial
     private Long execGroupId;
 
     @Column
-    private Long flowId;
+    private Long intfId;
 
     @Builder
-    public ExecutionGroupFlowEntity(Long execGroupId, Long flowId) {
+    public ExecutionGroupFlowEntity(Long execGroupId, Long intfId) {
         this.execGroupId = execGroupId;
-        this.flowId = flowId;
+        this.intfId = intfId;
     }
 
-    public void update(Long execGroupId, Long flowId) {
+    public void update(Long execGroupId, Long intfId) {
         this.execGroupId = execGroupId;
-        this.flowId = flowId;
+        this.intfId = intfId;
     }
 }

@@ -36,7 +36,7 @@ public class ExecutionGroupFlowRestController {
 
     @GetMapping(value = "/exec-group-flow/find-by-flow-id")
     public SingleResult<ExecutionGroupFlowEntity> selectDataByGroupIdAndFlowId(@RequestParam("flowId") Long flowId) {
-        return responseService.getSingleResult(executionGroupFlowService.selectByFlowId(flowId));
+        return responseService.getSingleResult(executionGroupFlowService.selectByIntfId(flowId));
     }
 
     @GetMapping(value = "/exec-group-flow")

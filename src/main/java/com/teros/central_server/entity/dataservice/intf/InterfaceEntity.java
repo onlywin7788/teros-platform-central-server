@@ -25,13 +25,13 @@ public class InterfaceEntity extends CommonDateEntity implements Serializable {
     @Column(length = 64)
     private String intfName;
 
-    @Column(length = 1048576)
+    @Column
     private String layout;
 
-    @Column(length = 1048576)
+    @Column
     private String configContents;
 
-    @Column(length = 1048576)
+    @Column
     private String description;
 
     @Builder

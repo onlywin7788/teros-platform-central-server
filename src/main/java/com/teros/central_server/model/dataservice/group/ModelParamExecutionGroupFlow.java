@@ -13,6 +13,6 @@ public class ModelParamExecutionGroupFlow {
     @ApiModelProperty(value = "execGroupId", required = true)
     private Long execGroupId;
 
-    @ApiModelProperty(value = "flowId", required = true)
-    private Long flowId;
+    @ApiModelProperty(value = "intfId", required = true)
+    private Long intfId;
 }

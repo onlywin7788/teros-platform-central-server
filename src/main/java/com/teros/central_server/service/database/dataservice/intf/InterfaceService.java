@@ -42,14 +42,16 @@ public class InterfaceService {
                 .build();
         Long lastID = interfaceRepository.save(entity).getIntfId();
 
+        /*
         // 미할당 그룹으로 groupflow 테이블에 등록
         Long emptyGroupId = 0L;
         ExecutionGroupFlowEntity groupFlowEntity = ExecutionGroupFlowEntity.builder()
                 .execGroupId(emptyGroupId)
-                .flowId(lastID)
+                .intfId(lastID)
                 .build();
 
         executionGroupFlowRepository.save(groupFlowEntity).getExecGroupFlowId();
+        */
 
         return select(lastID);
     }
