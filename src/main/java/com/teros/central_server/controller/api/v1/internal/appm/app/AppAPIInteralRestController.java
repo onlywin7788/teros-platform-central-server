@@ -3,27 +3,26 @@ package com.teros.central_server.controller.api.v1.internal.appm.app;
 import com.teros.central_server.model.response.CommonResult;
 import com.teros.central_server.service.database.apiservice.response.ResponseService;
 import com.teros.central_server.service.internal.apiservice.app.APIServiceInternalService;
-import com.teros.central_server.service.internal.apiservice.app.AppInternalService;
 import io.swagger.annotations.Api;
 import org.springframework.web.bind.annotation.*;
 
-@Api(tags = {"appm : appm-internal-service"})
+@Api(tags = {"appm : api-internal-service"})
 @RestController
 @RequestMapping(value = "/v1")
-public class AppInteralRestController {
+public class AppAPIInteralRestController {
 
-    private final AppInternalService appInternalService;
+    private final APIServiceInternalService appInternalService;
     private final ResponseService responseService;
 
-    public AppInteralRestController(AppInternalService appInternalService, ResponseService responseService) {
+    public AppAPIInteralRestController(APIServiceInternalService appInternalService, ResponseService responseService) {
         this.appInternalService = appInternalService;
         this.responseService = responseService;
     }
 
-    @GetMapping(value = "/internal/appm/app/host")
-    public CommonResult isHostAlive(@RequestParam String host, @RequestParam long port) throws Exception{
+    @PostMapping(value = "/internal/appm/app/deploy")
+    public CommonResult deployConfig(@RequestParam String host, @RequestParam long port, @RequestParam long apiId) throws Exception{
 
-        boolean ret =  appInternalService.isHostAlive(host, port);
+        boolean ret =  appInternalService.deployConfig(host, port, apiId);
         return responseService.getResult(ret);
     }
 }
