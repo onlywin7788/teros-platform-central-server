@@ -26,7 +26,7 @@ public class DataServiceInternalService {
         String configName = interfaceEntity.getIntfName();
         String configContents = interfaceEntity.getConfigContents();
 
-        String apiControlURL = String.format("http://%s:%s/api-control-manager/v1/config/deploy?configName=%s", ip, port, configName);
+        String apiControlURL = String.format("http://%s:%s/data-control-manager/v1/config/deploy?configName=%s", ip, port, configName);
         remoteNetworkCall.requestRestEntity(apiControlURL, HttpMethod.POST, configContents);
 
         return true;
